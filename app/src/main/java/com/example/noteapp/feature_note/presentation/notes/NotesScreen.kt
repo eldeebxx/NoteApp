@@ -60,7 +60,7 @@ fun NotesScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Your note",
+                    text = "Your Notes",
                     style = MaterialTheme.typography.headlineMedium
                 )
 
@@ -100,7 +100,7 @@ fun NotesScreen(
                                 // Navigate to note details
                                 navController.navigate(
                                     Screen.AddEditNoteScreen.route +
-                                            "?:noteId=${note.id}&noteColor=${note.color}"
+                                            "?noteId=${note.id}&noteColor=${note.color}"
                                 )
                             }, onDeleteClick = {
                             viewModel.onEvent(NotesEvent.DeleteNote(note))
